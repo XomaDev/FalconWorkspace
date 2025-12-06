@@ -29,7 +29,6 @@ function loadWasm() {
     console.log("Loaded Wasm!")
     go.run(inst);
     inst = WebAssembly.instantiate(mod, go.importObject); // reset instance
-
     setInterval(safeRender, 100)
   }).catch((err) => {
     console.error(err);
